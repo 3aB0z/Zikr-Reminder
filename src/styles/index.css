@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary-50: #f0fdf7;
+  --color-primary-100: #dcfce7;
+  --color-primary-200: #bbf7d0;
+  --color-primary-300: #86efac;
+  --color-primary-400: #4ade80;
+  --color-primary-500: #1fb580;
+  --color-primary-600: #16a34a;
+  --color-primary-700: #15803d;
+  --color-primary-800: #166534;
+  --color-primary-900: #145231;
+
+  --color-secondary-500: #2596be;
+
+  --color-accent-50: #f0f4ff;
+  --color-accent-100: #e0e9ff;
+  --color-accent-200: #c7d7fe;
+  --color-accent-300: #a4bcfd;
+  --color-accent-400: #8da5f0;
+  --color-accent-500: #6172f3;
+  --color-accent-600: #444ce7;
+  --color-accent-700: #3538cd;
+  --color-accent-800: #2d31a6;
+  --color-accent-900: #2d3282;
+
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --animation-fade-in: fadeIn 0.3s ease-in-out;
+  --animation-slide-in: slideIn 0.3s ease-out;
+  --animation-pulse-subtle: pulseSubtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animation-slide-in-right: slideInRight 0.3s ease-out;
+  --animation-slide-out-right: slideOutRight 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulseSubtle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+* {
+  @apply transition-colors duration-200;
+}
+
+button {
+  @apply cursor-pointer;
+}
+
+body {
+  @apply bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(241 245 249);
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background-color: rgb(15 23 42);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(203 213 225);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(148 163 184);
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background-color: rgb(51 65 85);
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(71 85 105);
+}
+
+.notification-enter {
+  animation: slideInRight 0.3s ease-out;
+}
+
+.notification-exit {
+  animation: slideOutRight 0.3s ease-out;
+}
