@@ -20,7 +20,7 @@
 
 **Download and run the app in 30 seconds:**
 
-1. Go to the [Releases](https://github.com/yourusername/Zikr-Reminder/releases) page
+1. Go to the [Releases](https://github.com/3aB0z/Zikr-Reminder/releases) page
 2. Download `Zikr Reminder 1.0.0.exe` from the latest release
 3. Run the `.exe` file
 4. The app will start and create a system tray icon
@@ -38,8 +38,8 @@
 
 When you first run the app:
 - A system tray icon appears (look for the Islamic icon in the bottom-right)
-- Click the icon to open the app window
-- Right-click for options (Pause, Resume, Settings, Exit)
+- **Left-click** the icon to open the app window
+- **Right-click** for options (Pause/Resume, Settings, Exit)
 - First reminder will appear within 10 seconds
 
 ---
@@ -74,12 +74,12 @@ When you first run the app:
 
 ### Main Window
 
-| Button | Action |
+| Button/Tab | Action |
 |--------|--------|
-| **+** | Add new adhkar |
-| **Pause** (⏸️) | Pause all reminders |
-| **Settings** (⚙️) | Configure theme and volume |
-| **Language** (🌐) | Switch between English/Arabic |
+| **Adhkar** tab | View and manage adhkar list |
+| **+** button | Add new adhkar |
+| **Settings** tab | Configure theme and volume |
+| **Pause/Resume** (top-right) | Pause or resume reminders |
 
 ### Notifications
 
@@ -94,31 +94,33 @@ When a reminder triggers:
 
 ```
 Zikr Reminder
-├── Show/Hide        → Toggle main window
-├── Pause/Resume     → Control reminders
+├── Pause/Resume     → Toggle reminders on/off
 ├── Settings         → App preferences
 └── Exit             → Quit application
 ```
 
+**Left-click tray icon:** Show/Hide app window
+
 ### Settings
+
+**Available options in Settings tab:**
 
 **Theme:**
 - System (auto-detect)
 - Light mode
 - Dark mode
 
-**Sound:**
-- Default bell
-- Chime
-- Custom sound (upload your own)
-- Muted
+**Notifications:**
+- Type: Floating window or System notification
+- Sound: Default, Bell, Chime, Custom, or Muted
+- Test Sound button to preview
+- Volume control (0-100%)
 
-**Notification Type:**
-- Floating window (custom glassmorphic)
-- System notification (Windows)
-
-**Reminder Interval:**
-- Adjustable in minutes (1-60 min)
+**Other:**
+- Language: English or العربية (Arabic)
+- Auto-start on system boot
+- Reset to defaults
+- Save button to apply changes
 
 ---
 
@@ -144,7 +146,7 @@ You can add more or customize these as needed.
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/Zikr-Reminder.git
+git clone https://github.com/3aB0z/Zikr-Reminder.git
 cd Zikr-Reminder
 
 # Install dependencies
@@ -284,7 +286,7 @@ Contributions are welcome! Feel free to:
 
 Have questions or issues?
 
-- Open a [GitHub Issue](https://github.com/yourusername/Zikr-Reminder/issues)
+- Open a [GitHub Issue](https://github.com/3aB0z/Zikr-Reminder/issues)
 - Check existing issues first
 - Provide details about your system and the problem
 
